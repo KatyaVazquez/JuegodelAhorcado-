@@ -44,7 +44,7 @@ const clicklet = (accion) =>{
     }
     if(acerto==false){//si la letra no existe, ES UN error
         error++;
-        const source = `img/img${error}.png`;
+        const source = `img${error}.png`;
         IMG.src = source;  
     } 
     if (error == 5){
