@@ -1,3 +1,6 @@
+String.prototype.replaceAt=function(index, character) { return this.substring(0, index) + character + this.substring(index+character.length); };
+
+
 const PAL = ['TUKPs', 'Papas', 'Carol', 'cepillo', 'colino', 'llorar', 'Luchar', 'perseverar', 'sipuedo'];
 const BUT = document.getElementById('but');
 const PARR = document.getElementById('pala');
@@ -9,6 +12,33 @@ const RE = document.getElementById('resultado');
 const BUTL = document.querySelectorAll('#letras button');
 let error ;
 let correcto ;
+
+
+
+///
+let palabraConGuiones = PALA.replace(/./g, '_ ');
+document.querySelector('#output').innerHTML = palabraConGuiones;
+document.querySelector('#but').addEventListener('click', () =>{
+
+    const letra = document.querySelector('#letra').value;
+
+    for(const i in PALA){
+        if(letra == PALA[i]){
+            palabraConGuiones = palabraConGuiones.replace(i*2, letra);
+        }
+    }
+    
+    document.querySelector('#output').innerHTML = palabraConGuiones;
+
+});
+
+
+
+
+
+
+
+
 console.log(PALA) //Palabra que va a salir por consola
 const mostrar_palabra = (()=>{
     for (let i = 0; i < PALA.length ; i++){
