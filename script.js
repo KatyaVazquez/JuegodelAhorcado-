@@ -1,6 +1,3 @@
-String.prototype.replaceAt=function(index, character) { return this.substring(0, index) + character + this.substring(index+character.length); };
-
-
 const PAL = ['TUKPs', 'Papas', 'Carol', 'cepillo', 'colino', 'llorar', 'Luchar', 'perseverar', 'sipuedo'];
 const BUT = document.getElementById('but');
 const PARR = document.getElementById('pala');
