@@ -13,32 +13,6 @@ const BUTL = document.querySelectorAll('#letras button');
 let error ;
 let correcto ;
 
-
-
-///
-let palabraConGuiones = PALA.replace(/./g, '_ ');
-document.querySelector('#output').innerHTML = palabraConGuiones;
-document.querySelector('#but').addEventListener('click', () =>{
-
-    const letra = document.querySelector('#letra').value;
-
-    for(const i in PALA){
-        if(letra == PALA[i]){
-            palabraConGuiones = palabraConGuiones.replace(i*2, letra);
-        }
-    }
-    
-    document.querySelector('#output').innerHTML = palabraConGuiones;
-
-});
-
-
-
-
-
-
-
-
 console.log(PALA) //Palabra que va a salir por consola
 const mostrar_palabra = (()=>{
     for (let i = 0; i < PALA.length ; i++){
